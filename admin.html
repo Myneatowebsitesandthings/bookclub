@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="banner-container">
+        <img src="library_banner.png" alt="Library Banner" class="banner">
+    </div>
+    <div class="content-container">
+        <h1>Admin Page</h1>
+        <div class="admin-section">
+            <h3>Set Current Book</h3>
+            <form method="POST" action="admin">
+                <label for="current_book_id">Select Book:</label>
+                <select id="current_book_id" name="current_book_id">
+                    {% for suggestion in suggestions %}
+                    <option value="{{ suggestion.id }}">{{ suggestion.title }} by {{ suggestion.author }}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit">Set as Current Book</button>
+            </form>
+        </div>
+        <div class="admin-section">
+            <h3>Reset User Password</h3>
+            {% for user in users %}
+            <form method="POST" action="{{ url_for('reset_password', user_id=user.id) }}">
+                <p>{{ user.username }}</p>
+                <button type="submit">Reset Password</button>
+            </form>
+            {% endfor %}
+        </div>
+        <div class="admin-section">
+            <h3>Delete User</h3>
+            {% for user in users %}
+            <form method="POST" action="{{ url_for('delete_user', user_id=user.id) }}">
+                <p>{{ user.username }}</p>
+                <button type="submit">Delete User</button>
+            </form>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

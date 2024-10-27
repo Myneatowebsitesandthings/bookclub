@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Finer Things Book Club{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <div class="banner-container">
+    <img src="{{ url_for('static', filename='images/library_banner.png') }}" alt="Library Banner" class="banner">
+  </div>
+  <div class="content-container">
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>

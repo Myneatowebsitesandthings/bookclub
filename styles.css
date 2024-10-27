@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap'); /* Import a fancy cursive font */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #013220; /* Dark forest green */
+  color: #fff;
+}
+
+.banner-container {
+  width: 100%;
+  height: 150px; /* Adjust height for banner appearance */
+  overflow: hidden;
+  position: relative;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure image covers the banner area */
+  object-position: center top; /* Center the image on the fireplace */
+}
+
+.index-page {
+  background-image: url('finerthings.lol/table.jpg'); /* Ensure the correct path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* Ensure it covers the entire height of the viewport */
+}
+
+.book-container {
+  text-align: center;
+  margin-top: 15px;
+  position: relative;
+}
+
+.book {
+  width: 80%; /* Adjust width as needed */
+  max-width: 600px;
+}
+
+.book-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #d4af37; /* Color matching the book border */
+  font-family: 'Great Vibes', cursive; /* Use the fancy cursive font */
+}
+
+.book-text .line1 {
+  font-size: 3.5em; /* Increase font size */
+}
+
+.book-text .line2 {
+  font-size: 3em; /* Increase font size */
+}
+
+.book-container a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.content-container {
+  background-color: #4A3526; /* Slightly lighter dark beige */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 80%; /* Adjust width as needed */
+  min-height: calc(100vh - 320px); /* Adjust height to extend to the bottom */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better appearance */
+  color: #fff;
+  position: relative; /* Added to position My Profile button */
+}
+
+.current-book {
+  font-family: 'Great Vibes', cursive; /* Use the fancy cursive font */
+  font-size: 3em;
+  margin: 20px 0;
+}
+
+.poem {
+  font-family: 'Georgia', serif;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+.profile-link {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.profile-link a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.profile-link a:hover {
+  text-decoration: underline;
+}
+
+.add-suggestion label,
+.add-suggestion input,
+.add-suggestion textarea,
+.add-suggestion button {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.add-suggestion label {
+  width: 30%;
+  vertical-align: top;
+}
+
+.add-suggestion input,
+.add-suggestion textarea,
+.add-suggestion button {
+  width: 65%;
+}
+
+.dashboard-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.current-book-section {
+  flex: 2;
+}
+
+.users-list-container {
+  width: 250px;
+  margin-left: 20px;
+  background-color: #f5f5dc; /* Parchment color */
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: -40px; /* Adjust this value to move the users section higher */
+}
+
+.users-title {
+  font-family: 'Great Vibes', cursive; /* Use the fancy cursive font */
+  font-size: 2em;
+  text-align: center;
+  color: #000;
+}
+
+.users-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.user-card {
+  background-color: #4A3526; /* Dark beige background */
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better appearance */
+}
+
+.user-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.user-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.user-card p {
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.public-profile-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.username {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.align-top {
+  vertical-align: top;
+}
+
+/* Admin Page Styles */
+.admin-section {
+  margin-bottom: 20px;
+}
+
+.admin-section h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.admin-section form {
+  margin-bottom: 10px;
+}
+
+.admin-section form label {
+  display: inline-block;
+  width: 150px;
+}
+
+.admin-section form input[type="text"],
+.admin-section form input[type="password"] {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.admin-section form button {
+  padding: 5px 10px;
+}
+
+/* My Profile button styling */
+.my-profile-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background-color: darkred;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.my-profile-button:hover {
+  background-color: #a30000;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-link {
+  margin-left: auto;
+}
+
+.admin-button {
+  background-color: darkred;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.admin-button:hover {
+  background-color: #a30000;
+}
+
+/* Add this to your CSS file */
+.quote {
+  font-family: 'Great Vibes', cursive; /* Fancy cursive font */
+  font-size: 1.5em; /* Adjust font size as needed */
+  text-align: center;
+  margin-top: 20px;
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+}
+
+/* Container for aligning both sections on the same line */
+.suggestions-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 20px; /* Add some padding if needed */
+}
+
+.suggestions-title,
+.add-suggestion-title {
+    width: 45%; /* Adjust width to fit both sections */
+    margin: 0 20px; /* Add margin for spacing */
+    color: #fff; /* Ensure the titles are visible */
+}
+
+.suggestions-list {
+    width: 45%; /* Adjust width as needed */
+    margin-top: 20px; /* Ensure no extra margin on top */
+}
+
+.add-suggestion {
+    width: 45%; /* Adjust width to fit both sections */
+    margin-left: auto;
+}
+
+/* Retain individual backgrounds for each suggestion */
+.suggestion-item {
+    background-color: #f5f5dc; /* Parchment color */
+    padding: 10px;
+    margin-bottom: 10px; /* Space between suggestions */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for better appearance */
+    color: #000; /* Black text color */
+}
+
+.logout-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: darkred;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.logout-button:hover {
+    background-color: #a30000;
+}
+
+.login-container {
+    background-color: #f5f5dc; /* Parchment color */
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px; /* Adjust width as needed */
+    margin: 0 auto; /* Center the container */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for better appearance */
+    text-align: center; /* Center text inside the container */
+}
+
+.login-container h2 {
+    font-family: 'Great Vibes', cursive; /* Fancy cursive font */
+    font-size: 1.5em; /* Adjust font size as needed */
+    color: #000;
+}
+
+.login-container label,
+.login-container input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.login-container input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-container button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #013220; /* Match your site's color scheme */
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #016733; /* Darker shade on hover */
+}

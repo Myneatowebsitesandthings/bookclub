@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:,"> <!-- This line prevents the favicon.ico request -->
+</head>
+<body>
+    <div class="banner-container">
+        <img src="library_banner.png" alt="Library Banner" class="banner">
+    </div>
+    <div class="content-container">
+        <!-- Debugging statement to check if user data is passed -->
+        <pre>{{ user | tojson }}</pre>
+        <h1 class="username">{{ user.username }}</h1>
+        <div class="profile-header">
+            {% if user.username == 'MasterAdmin' %}
+            <div class="admin-link">
+                <a href="admin.html" class="admin-button">Admin Page</a>
+            </div>
+            {% endif %}
+        </div>
+        <h2>My Suggestions</h2>
+        <div class="suggestions-container">
+            <div class="suggestions-list">
+                <!-- Debugging statement to check if suggestions data is passed -->
+                <pre>{{ suggestions | tojson }}</pre>
+                {% for suggestion in suggestions %}
+                <div class="suggestion-item">
+                    <p><strong>Title:</strong> {{ suggestion.title }}</p>
+                    <p><strong>Author:</strong> {{ suggestion.author }}</p>
+                    <p><strong>Pages:</strong> {{ suggestion.pages }}</p>
+                    <p><strong>Chapters:</strong> {{ suggestion.chapters }}</p>
+                    <p><strong>Description:</strong> {{ suggestion.description }}</p>
+                    <p><strong>Date Added:</strong> {{ suggestion.date_added.strftime('%Y-%m-%d') }}</p>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="add-suggestion">
+                <form method="post" action="/profile">
+                    <label for="title">Title:</label>
+                    <input type="text" name="title" id="title" required>
+                    <br>
+                    <label for="author">Author:</label>
+                    <input type="text" name="author" id="author" required>
+                    <br>
+                    <label for="pages">Pages:</label>
+                    <input type="number" name="pages" id="pages" required>
+                    <br>
+                    <label for="chapters">Chapters:</label>
+                    <input type="number" name="chapters" id="chapters" required>
+                    <br>
+                    <label for="description">Description:</label>
+                    <textarea name="description" id="description" required></textarea>
+                    <br>
+                    <button type="submit">Add Suggestion</button>
+                </form>
+            </div>
+        </div>
+        <a href="logout.html" class="logout-button">Logout</a>
+    </div>
+</body>
+</html>
